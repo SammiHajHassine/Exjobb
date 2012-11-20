@@ -1,9 +1,8 @@
-\contentsline {chapter}{\numberline {1}Popul\IeC {\"a}rvetenskaplig beskrivning}{2}{chapter.1}
-\contentsline {chapter}{\numberline {2}Introduction}{4}{chapter.2}
-\contentsline {subsection}{\numberline {2.1}Reading Instructions}{4}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2}Background}{4}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.3}Problem}{4}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.4}Purpose and Goal}{4}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.5}Restrictions}{4}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.6}Method}{4}{subsection.2.2.6}
-\contentsline {chapter}{\numberline {3}Technical Background}{5}{chapter.3}
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{4}
+\contentsline {subsection}{\numberline {1.1}Reading Instructions}{4}
+\contentsline {subsection}{\numberline {1.2}Background}{4}
+\contentsline {subsection}{\numberline {1.3}Problem}{5}
+\contentsline {subsection}{\numberline {1.4}Purpose and Goal}{5}
+\contentsline {subsection}{\numberline {1.5}Restrictions}{5}
+\contentsline {subsection}{\numberline {1.6}Method}{5}

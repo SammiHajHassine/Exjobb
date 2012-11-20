@@ -1,41 +1,25 @@
-\documentclass[11pt,a4paper,oneside]{report}
+\documentclass{article}
 
-\renewcommand*\thesection{\arabic{section}}
-
-\usepackage{soul}
-\usepackage{color}
-\usepackage{graphicx}
-\usepackage{titlesec}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true,linkcolor=black,citecolor=black}
-
-\usepackage{color}
-\usepackage{listings}
-
-\usepackage{framed}
-\usepackage{float}
-\usepackage{array}
-
-\usepackage{chngpage}
-\usepackage{tabularx}
-
-\usepackage[T1]{fontenc}	      
 \usepackage[utf8]{inputenc}
+\usepackage[icelandic,english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{parskip}
+\usepackage{url}
+\usepackage{pdfpages}
 
-\usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm]{geometry}
-\titlespacing*{\chapter}{0pt}{-30pt}{20pt}
-\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\graphicspath{{./images/}}
 
-\setcounter{secnumdepth}{3}
+\begin{document}	
 
-\begin{document}
+	\include {sections/abstract}
+	\include {sections/pop_vet_beskr}
+		\tableofcontents
+	\include {sections/introduction}
 
-\input{sections/abstract}
-\input{sections/pop_vet_beskr}
-\input{sections/toc}
-\input{sections/introduction}
-\input{sections/technical_background}
-\input{sections/bibliography}
-
-
+	\bibliographystyle{plain}
+	\bibliography{references}
+	
+	\include {appendix}
 \end{document}
