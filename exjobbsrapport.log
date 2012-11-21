@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.11.12)  21 NOV 2012 15:54
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2012.11.12)  21 NOV 2012 16:45
 entering extended mode
-**exjobbsrapport.tex
+**exjobbsrapport
 (C:\Users\sammi.haj.hassine\Exjobb\rapport_repo\exjobbsrapport.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
@@ -439,19 +439,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [4
 
 ] [5]) [6] (C:\Users\sammi.haj.hassine\Exjobb\rapport_repo\exjobbsrapport.bbl
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 7.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
-File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-Underfull \hbox (badness 10000) in paragraph at lines 4--8
-[]\T1/cmr/m/n/10 StatCounter Global Stats.  Mo-bile vs desk-top
- []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--8
-\T1/cmr/m/n/10 brows-ing.  $\T1/cmtt/m/n/10 http : / / gs . statcounter . com /
- #mobile _ vs _$
- []
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 ) [7
 
@@ -460,23 +449,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--8
 (C:\Users\sammi.haj.hassine\Exjobb\rapport_repo\sections/pop_vet_beskr.aux)
 (C:\Users\sammi.haj.hassine\Exjobb\rapport_repo\sections/introduction.aux)) ) 
 Here is how much of TeX's memory you used:
- 3380 strings out of 494045
- 44949 string characters out of 3148350
+ 3357 strings out of 494045
+ 44306 string characters out of 3148350
  107683 words of memory out of 3000000
- 6611 multiletter control sequences out of 15000+200000
- 8575 words of font info for 21 fonts, out of 3000000 for 9000
+ 6592 multiletter control sequences out of 15000+200000
+ 8262 words of font info for 20 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 37i,6n,39p,1063b,261s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,6n,39p,1059b,148s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C
 :/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Program
  Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx1000.pfb><C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/public/cm-super/sfbx1440.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/cm-super/sfrm1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/cm-super/sftt1000.pfb>
-Output written on exjobbsrapport.pdf (7 pages, 111880 bytes).
+e1/public/cm-super/sfrm1000.pfb>
+Output written on exjobbsrapport.pdf (7 pages, 83158 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
+ 43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

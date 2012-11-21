@@ -3,5 +3,6 @@ A level-1 auxiliary file: sections/abstract.aux
 A level-1 auxiliary file: sections/pop_vet_beskr.aux
 A level-1 auxiliary file: sections/introduction.aux
 The style file: plain.bst
-A level-1 auxiliary file: appendix.aux
+I found no \citation commands---while reading file exjobbsrapport.aux
 Database file #1: references.bib
+(There was 1 error message)
