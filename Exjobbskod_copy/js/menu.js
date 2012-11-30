@@ -15,7 +15,7 @@ $(document).ready(function() {
     /***INITIAL OPERATIONS***/
 
 
-    noimg.css("display", "block");
+    /*noimg.css("display", "block");
     noimg.appendTo(sidemenu);
     img2 = noimg.clone();
     img2.appendTo(sidemenu2);
@@ -35,53 +35,17 @@ $(document).ready(function() {
     /**********************/
 
   /******CLICK-FUNCTIONS*****/
-  currentPage.click(function() {
+  /*currentPage.click(function() {
     if(allSideMenusOpen == true){
       closeAllSidemenus();
     }
-  });
-
-  /*$('#logo').click(function() {
-    closeAllSidemenus();
-    numofsidemenus = 1;
-    currentPage = $('#menuWrapper');
-  })*/
-
-  /*$('#navImg').click(function() {
-      if(allSideMenusOpen == false) {
-        openAllSidemenus();
-      }
-      else {
-        closeAllSidemenus();
-      }
   });*/
 
- /* $('.item').click( 
-    function() {
-      sidemenu2.animate({width: "72%"}, 150);
-    
-      /*tillfällig lösning*/
-    /*  changeDirectionOfArrow(sidemenu2, "left");
-      currentPage = sidemenu;
-      numofsidemenus++;
-    });*/
-
-  $('.item2').click( 
-    function() {
-      sidemenu3.animate({width: "60%"}, 150);
-      /*TODO
-      * Kolla vilken item som blivit klickad på 
-      */
-      /*tillfällig lösning*/
-      changeDirectionOfArrow(sidemenu3, "left");
-      currentPage = sidemenu2;
-      
-      numofsidemenus++;
-    });
+ 
   /*********************/
 
-  /******FUNCTIONS*******/
-  function imgClick(event) {
+ /* /******FUNCTIONS*******/
+  /*function imgClick(event) {
     if(event.data.param1.selector== "#sideMenu1") {
       closeAllSidemenus();
       //sidemenu.animate({width: "0"}, 150);
@@ -123,7 +87,7 @@ $(document).ready(function() {
         } 
       }  
     }
-  }
+  }*/
 
   function changeDirectionOfArrow(menu, direction){
     if(direction == "right") {
@@ -136,30 +100,55 @@ $(document).ready(function() {
     } 
   }
 
-  function openAllSidemenus() {
-    var percentage = 85;
+  // function openAllSidemenus() {
+  //   var percentage = 85;
 
-    for(var i = 1; i <= numofsidemenus; i++){
-      var select = "#sideMenu" + i;
-      var currentMenu = $(select);
+  //   for(var i = 1; i <= numofsidemenus; i++){
+  //     var select = "#sideMenu" + i;
+  //     var currentMenu = $(select);
 
-      currentMenu.animate({width: "" + percentage +"%"});
-      currentMenu.find(".rightimg").css("display", "none");
-      currentMenu.find(".leftimg").css("display", "block");
+  //     currentMenu.animate({width: "" + percentage +"%"});
+  //     currentMenu.find(".rightimg").css("display", "none");
+  //     currentMenu.find(".leftimg").css("display", "block");
 
-      percentage -= 15;
-    }  
-    allSideMenusOpen = true;
-  }
+  //     percentage -= 15;
+  //   }  
+  //   allSideMenusOpen = true;
+  // }
 
-  function closeAllSidemenus() {
-    for(var i = 1; i <= numofsidemenus; i++){
-          var select = "#sideMenu" + i;
-          $(select).animate({width: "0"}, 150);
-    } 
-    allSideMenusOpen = false;
-  }
+  // function closeAllSidemenus() {
+  //   for(var i = 1; i <= numofsidemenus; i++){
+  //         var select = "#sideMenu" + i;
+  //         $(select).animate({width: "0"}, 150);
+  //   } 
+  //   allSideMenusOpen = false;
+  // }
   /***********************/
+
+   /*$('#logo').click(function() {
+    closeAllSidemenus();
+    numofsidemenus = 1;
+    currentPage = $('#menuWrapper');
+  })*/
+
+  /*$('#navImg').click(function() {
+      if(allSideMenusOpen == false) {
+        openAllSidemenus();
+      }
+      else {
+        closeAllSidemenus();
+      }
+  });*/
+
+ /* $('.item').click( 
+    function() {
+      sidemenu2.animate({width: "72%"}, 150);
+    
+      /*tillfällig lösning*/
+    /*  changeDirectionOfArrow(sidemenu2, "left");
+      currentPage = sidemenu;
+      numofsidemenus++;
+    });*/
 });
 
 
