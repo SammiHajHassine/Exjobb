@@ -1,0 +1,16 @@
+var MyClass = function() {
+    this.method = function() {
+    }
+};
+
+MyClass.prototype.observe = observerPattern.observe;
+
+var instance = new MyClass();
+
+instance.observe()
+
+
+var observerPattern = {
+    "observe" : function() { ... },
+    "distribute" : 
+};
