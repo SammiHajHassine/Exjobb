@@ -6,3 +6,10 @@
 \contentsline {subsection}{\numberline {1.4}Purpose and Goal}{6}
 \contentsline {subsection}{\numberline {1.5}Limitations}{6}
 \contentsline {subsection}{\numberline {1.6}Method}{6}
+\contentsline {section}{\numberline {2}Introduction to Mobile Web Browsing}{7}
+\contentsline {subsection}{\numberline {2.1}Mobile Web Pages}{7}
+\contentsline {subsection}{\numberline {2.2}Mobile Adaptation of Web Pages}{7}
+\contentsline {subsubsection}{\numberline {2.2.1}Difficulties}{8}
+\contentsline {section}{\numberline {3}Mobile Information Architecture}{9}
+\contentsline {subsection}{\numberline {3.1}Definition of Information Architecture}{9}
+\contentsline {section}{\numberline {4}Mobile Web Design and Development}{10}
