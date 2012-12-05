@@ -1,0 +1,580 @@
+.aShare {
+	background-position: 0 -2624px;	
+	font-weight: bold;
+	font-size: 11px;
+	font-family: Arial,Helvetica Neueu,Helvetica;
+} 
+.aShareImage{
+	background:url(WidgetCSSSprite.png?V1) 4px -68px no-repeat;	
+	cursor: pointer;
+	display: block !important;
+	height: 14px !important;
+	line-height: 16px !important;
+	padding-left: 14px !important;								 
+	text-align: left;
+	color:#808080;
+	width:55px;
+}
+.aSharehOverImage{
+	background:url(WidgetCSSSprite.png?V1) 4px -51px no-repeat;
+	
+	cursor: pointer;
+	display: block !important;
+	height: 14px !important;
+	line-height: 16px !important;
+	padding-left: 14px !important;								 
+	text-align: left;	
+	color:#CC1F23;
+	width:55px;
+}
+
+.aClipImage{
+	background:url(WidgetCSSSprite.png?V1) 0px -101px no-repeat;
+ 	cursor: pointer;
+	display: block !important;
+	height: 16 !important;
+	line-height: 16px !important;
+	padding-left: 18px !important;						 
+	text-align: left;	
+	color:#808080;
+	width:45px;
+}	
+.aCliphOverImage{
+	background:url(WidgetCSSSprite.png?V1) 0px -84px no-repeat;
+	cursor: pointer;
+	display: block !important;
+	height: 16 !important;
+	line-height: 16px !important;
+	padding-left: 18px !important;						 
+	text-align: left;
+	color:#CC1F23;	
+	width:45px;
+}	
+ 
+.aInfoImage{
+	background:url(WidgetCSSSprite.png?V1) 0px -136px no-repeat;
+
+	cursor: pointer;
+	display: block !important;
+	height: 16 !important;
+	line-height: 16px !important;
+	padding-left: 17px !important;						 
+	text-align: left;	
+	color:#808080;
+	width:45px;
+}
+.aInfohOverImage{
+	background:url(WidgetCSSSprite.png?V1) 0px -119px no-repeat;
+	
+	cursor: pointer;
+	display: block !important;
+	height: 16 !important;
+	line-height: 16px !important;
+	padding-left: 17px !important;						 
+	text-align: left;	
+	color:#CC1F23;
+	width:45px;
+}	
+.aChartLogoImage{
+	background:url(WidgetCSSSprite.png?V1) 0px -198px no-repeat;
+	
+	cursor: pointer;
+	display: block !important;
+	height: 16 !important;
+	width:43px;
+	line-height: 16px !important;
+	/*padding-left: 20px !important;	*/					 
+	text-align: left;
+	font-size: 10px;
+	font-family: Arial,Helvetica Neueu,Helvetica;
+	 	 
+	margin-right:0px;
+	padding-right:0px;
+}
+.aChartLogohOverImage{
+	background:url(WidgetCSSSprite.png?V1) 0px -181px no-repeat;
+	
+	cursor: pointer;
+	display: block !important;
+	height: 16 !important;
+	width:43px;
+	line-height: 16px !important;
+	/*padding-left: 20px !important;	*/					 
+	text-align: left;
+	font-size: 10px;
+	font-family: Arial,Helvetica Neueu,Helvetica;
+	  
+	margin-right:0px;
+	padding-right:0px;
+}
+.tableStyle
+{
+  color:#000000;
+  font-size:11;
+  font-family: Arial,Helvetica Neueu,Helvetica;
+  font-weight:bold;
+  width:345px;
+}
+#popupChartClose {
+	color: #FFFFFF;
+	display: block;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 20px;
+	position: absolute;
+	right: 7px;
+	top: 2px;
+}
+#shareChartPopup {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #999999;
+	display: none;
+	font-size: 11px;    
+	position: fixed;
+	width: 375px; 
+	height:332px;
+	z-index: 2;
+	color: #000000;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-family:arial;
+	font-weight:bold;
+}
+.shareChartPopupTitleBar
+{
+	cursor:move;
+	width: 375;
+	height:30px;
+	background:#CE2026;
+	margin-left:0px;
+}
+.infoChartPopupTitleBar
+{
+	background:#CE2026;
+	width:375px;
+	height:30px;
+	margin-top:0px;
+	top:0px;
+	position:absolute;
+	left:0px;
+	cursor:move;
+}
+ .chartDetailsDiv
+ {
+	width:350px;
+	margin-left:20px;
+	margin-right:5px;
+	margin-top:5px;
+	margin-bottom:10px; 
+	padding-top:35px;
+ }
+ .chartAuthorSpan
+ {
+	height:20px;
+	width:90px;
+	float:left;
+ }
+ .chartAuthorDiv
+ {
+	margin-left:90px;
+	height:45px;
+	width:255px;
+	overflow-y: auto;
+	overflow-x: hidden;
+ }
+ 
+ .chartTagsLabel
+ {
+	height:40px;
+	width:90px;
+	float:left;
+ }
+ .chartCopyRightTextArea
+ {
+	font-family:Arial,Helvetica Neueu,Helvetica; 
+	font-size:12px;
+	font-weight: normal;
+	width:255px;
+	height:45px;
+	float:left; 
+	resize: none;
+ 
+	readonly:true;    
+	border:0px; 
+	overflow-y: auto;
+	overflow-x: hidden;
+ }
+ .chartTagsTextArea
+ {
+	font-family:Arial,Helvetica Neueu,Helvetica; 
+	font-size:12px;
+	font-weight: normal; 
+	width:255px;
+	height:35px;
+	resize: none; 
+	readonly:true;
+	    
+	border:0px;   
+    overflow-y: auto;
+	overflow-x: hidden;	
+}
+#shareChartPopup h1{
+	text-align:left;
+	color:#FFFFFF;								 
+	border-bottom:0px #D3D3D3;
+	border:0px none;
+	font-family:inherit;
+	font-size:15;
+	font-style:inherit;
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+	vertical-align:baseline;
+	
+	padding-top:5px;
+	margin-left:5px;
+	margin-right:15px;
+}
+#shareChartPopup hr{
+	margin-top:2px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:2px;
+	border-color:#d5d3d3;	 
+	width:345px;	 
+} 
+.chartTextArea
+{
+   resize: none;
+   width:190px;
+   readonly:true;
+   font-family:Arial,Helvetica Neueu,Helvetica;     
+   border:0px;
+   width: 240px; 
+   overflow:hidden;
+}
+.chartInfoBox
+{
+  /* width:160px;*/
+   font-family:Arial,Helvetica Neueu,Helvetica;
+   font-size:11px;
+   font-weight:normal;
+   float:left;  
+}
+.chartdetailstextcolor{
+   color: #FFFFFF;
+}
+.chartTags{
+   color: #FFFFFF;
+   display: block;
+   height:48px;
+   width:100%;
+   padding-right:0;    
+}
+ 
+.popupiChartLogo{
+    color: #FFFFFF;
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    position: absolute;
+    padding-left: 320px;
+    right: 20px;
+    top: 270px;
+}
+.popupChartClose {
+    color: #FFFFFF;
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+}
+.chartdetails {
+    width: 375px; 
+	height:332px;
+	 
+	display: none;
+	position: absolute;
+	
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #999999;
+	margin:0px;
+	padding:0px;
+	 
+} 
+.chartdetails h1{
+	border:0px none;
+	font-family:inherit;
+	font-size:15px;
+	font-style:inherit;
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+	vertical-align:baseline;
+	margin:0px;  
+	color:#FFFFFF;
+}
+.chartdetails hr{
+	margin-top:2px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:2px;
+	border-color:#d5d3d3;
+	float:left; 
+	width:342px;
+} 
+.chartinfodetails{
+	font-family: Arial, 'Helvetica Neueu', Helvetica; 
+	font-size: 12px;  
+	border-style: none; 
+	border-width:1px;
+	margin-left: 0px; 
+	margin-right: 0px;
+	border-color:#999999;
+	resize: none;
+    width:205px;
+    readonly:true;	 
+	overflow:hidden;
+}
+.chartDescriptionDiv
+{
+	padding:0px;
+}
+.chartDescription{
+	font-family: Arial, 'Helvetica Neueu', Helvetica; 
+	font-size: 12px;  
+	border-style: none; 
+	border-width:1px;	 
+	margin-left: 0px; 
+	margin-right: 0px;
+	width: 255px; 
+	height:135px;
+	color:black;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.chartShareEmailBody
+{
+	font-family: Arial, 'Helvetica Neueu', Helvetica; 
+	font-size: 12px;  
+	width:250px;
+	height:65px;
+	border:solid 1px #4D4C4D;
+	overflow:hidden;
+}
+.chartShareInput
+{
+	font-family: Arial, 'Helvetica Neueu', Helvetica; 
+	font-size: 12px;  
+	width:250px;
+	border:solid 1px #4D4C4D;
+}
+.chartShareInputCopyEmbed
+{
+	font-family: Arial, 'Helvetica Neueu', Helvetica; 
+	font-size: 12px;  
+	width:160px;
+	border:solid 1px #4D4C4D;
+}
+.tdEmbedCodeSpacer
+{
+	width:20px;
+}
+.divEmbedLabel{
+	float:left;
+	width:60px;
+}
+.divCopyEmbedCodeLabel
+{
+	float:left;
+	width:102px;
+	text-align:right;
+}
+.divURLLabel
+{
+	margin-left:22px;
+	float:left;
+	width:60px;
+}
+.divCopyUrlLabel
+{
+	float:left;
+	width:98px;
+	text-align:right;
+}
+.advocChartLabel
+{
+	font-style:italic;
+	margin-top:4px;
+	margin-bottom:4px;
+	color:#848484;
+	font-size:11px;
+}
+.chartfooterlink{
+	border:0px none;
+	font-family:calibri; 
+	font-size:13px;
+	font-style:italic;
+	font-weight:bold;
+	text-decoration: none;
+	display:none;
+}
+.chartfooterlink a:link {
+	color:#1242E4;
+	text-decoration:none;
+}
+
+.chartwidgetlink{
+	border:0px none;
+	font-family:Arial, 'Helvetica Neueu', Helvetica; 
+	font-size:11px;
+	font-style:italic;
+	font-weight:bold;
+	text-decoration: none; 
+}
+.chartwidgetlink a:link {
+	color:#1242E4;
+	text-decoration:none;
+}
+.chartFooterChartBy
+{
+	font-family:Arial, 'Helvetica Neueu', Helvetica;  
+	font-size:11px;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration: none;
+	color:#808080;
+}
+.chartfootersaveprintbutton{
+	border:0px none;
+	font-family:Arial,'Helvetica Neueu', Helvetica;  
+	font-size:11px;
+	font-style:normal;
+	font-weight:bold;
+	text-decoration: none;
+
+	float:left;
+	padding-top:5px;
+	cursor:pointer;
+	width:40px;
+	color:#808080;
+}
+.chartfootersaveprintbutton a:link {
+    color:#1242E4;
+    text-decoration:none;
+}
+
+.chartfooterAuthorlink
+{
+	border:0px none;
+	font-family:Arial,'Helvetica Neueu', Helvetica;
+	font-size:13px;
+	font-style:italic;
+	font-weight:bold;
+	text-decoration: none;
+	color:#868686;
+	
+	margin-top:4px;
+	float:left;
+}
+.chartfooterAuthorlink a:link {
+ color:#1242E4;
+ text-decoration:none;
+}
+/*.chartfooterlink a:visited  {
+ color:#inherit;
+ 
+}
+.chartfooterlink a:hover  {
+ color:inherit;
+ 
+}
+.chartfooterlink a:active  {
+ color:#inherit;
+ 
+}*/
+
+.chartHeaderViewCount
+{
+	margin-top:5px;
+	margin-right:5px;
+	font-size:11px;
+	font-weight: bold;
+	/*width:200px;*/
+	float:right;
+	font-family:Arial,Helvetica Neueu,Helvetica;
+	color:#808080;
+}
+.clickToCopyText{
+	cursor: pointer;
+	font-size:10px;
+	font-weight:bold;
+	font-style:italic;
+	color:#1D1D1D;
+}
+.sendButton{
+    font-size:12px;
+	font-weight:bold;
+	font-family:Arial,Helvetica Neueu,Helvetica;
+	background:none;
+	margin:6px;
+	padding-left:10px;
+	padding-right:10px;
+	background: #626262;
+	border: 1px solid #626262;
+	color:#FFFFFF;
+	cursor:pointer;
+	border-radius:3px;
+	-webkit-border-radius:3px;
+    -moz-border-radius:4px;
+    margin-right: 14px;
+ 
+}
+.facebook_icon{
+	background:url(WidgetCSSSprite.png?V1) -25px -1px no-repeat;	
+}
+.twitter_icon{
+	background:url(WidgetCSSSprite.png?V1) 2px -26px no-repeat;
+}
+.pinterest_icon{
+	background:url(WidgetCSSSprite.png?V1) 2px -1px no-repeat;
+}
+.linkedin_icon{
+	background:url(WidgetCSSSprite.png?V1) -25px -26px no-repeat;
+	width: 26px;
+}
+//////////chart embed css
+
+.ichartsembed div{
+display: inline;
+}
+
+.ichartsembed #chartdiscussion {
+position: relative; top:-8px; right: 55px;
+background: #F0EFEF;
+/*margin-left:60px; */
+}
+
+
+.ichartsembed #chartdiscussion a {
+font-family: calibri, arial, sans-serif;
+font-weight: bold;
+font-size:16px;
+color:#808080;
+letter-spacing: -0.01em;
+}
+
+.ichartsembed #chartdiscussion a:link{
+color: inherit;
+text-decoration: none;
+}
+
+.ichartsembed #chartdiscussion a:hover{
+cursor: pointer;
+color:#C34146;
+text-decoration: none;
+}

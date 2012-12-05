@@ -1,0 +1,11 @@
+\chapter*{Abstract}
+
+\thispagestyle{empty}
+
+A single-page application is a website that retrieves all needed components in one single page load. The intention is to get a user experience that reminds more of a native application rather than a website. Single-page applications written in Javascript are becoming more and more popular, but when the size of the applications grows the complexity is also increased. A good architecture or a suitable framework is therefore needed.
+
+In the thesis was first a number of design patterns suitable for GUI-applications analyzed. Based on a compound of these design patterns, an architecture that targets single-page applications was designed. The architecture was designed to make applications easy to develop, test and maintain. Initial loading time, data synchronization and search engine optimizations were also important aspects that were considered. A framework based on the architecture was implemented, tested and compared against other frameworks available on the market. 
+
+The framework that was implemented was designed to be modular, supports routing and templates as well as a number of different drivers for API communication. The modules were designed with a variant of the MVC-pattern, where a presentation model was introduced between the controller and the view. This allows unit tests to bypass the user interface and instead communicate directly with the core of the application. After minification and compression, the size of the framework is only 14.7 kB including all its dependencies. This results in a low initial loading time.
+
+Finally, a solution that solves the problems regarding search-engine optimizations is also presented. It is based on an API written in PhantomJS that executes Javascript so a static snapshot can be served to the crawlers. The solution is fast, scalable and easy to maintain.

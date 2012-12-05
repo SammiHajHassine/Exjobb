@@ -1,0 +1,114 @@
+/* FOOTER STARTS */
+#footer {
+	clear:both;
+	text-align:center;
+	padding-top:45px;	
+	width:100%;
+	min-width:1000px;
+	height:12.0em;
+}
+.greyLinks {
+	display:inline;
+	color:#616161;
+	font-weight:bold;
+	text-decoration:none;
+}
+.greyLinks a:hover {
+	color:#616161;
+	font-weight:bold;
+	text-decoration:underline;
+}
+.greyLinks a, .greyLinks a:visited {
+	color:#616161;
+	font-weight:bold;
+	text-decoration:none;
+}
+.footerLinks {
+	background:#003164 url(http://cdn.idc.com/img/bgr-footer.jpg) repeat-x;
+	width:100%;
+	padding:0px;
+	height:9.25em;
+}
+.footerMain {
+	height:7em;
+	*height:7%;
+	width:100%;
+	left:0;
+	right:0;
+	margin-left:0px;
+	margin-right:0px;
+	line-height:15px;
+	*line-height:100%;
+	clear:both;
+	color:#ffffff;
+}
+.footerMain div {float:left; width:100%;}
+.footerMain a:hover, .greyLinks a:hover {text-decoration:underline;}
+.footerMain a:visited {color:#ffffff;}
+.footerMain, .footerMain strong {color:#ffffff;}
+.footerMain {display:inline;float:left;}
+.footerMain a {color:#ffffff; text-decoration:none;}
+.copyright {text-align:right; font-size:0.85em; line-height:1.3em;}
+
+.linksIcon {
+	width:100%;
+	padding:10px 0px 10px 0px;
+	font-size:0.9em; 
+	text-align:center;
+}
+.linksDown {
+	width:100%;
+	margin-top:8px;
+	*margin-top:0px;
+	_margin-top:0px;
+	font-size:0.85em; 
+	text-align:center;
+}
+#lowerMainNav {
+	width:100%;
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:center;
+	background-color:#e9e9e9;
+	border-bottom:3px solid #a5a4a4;
+}
+#corpAddress {
+	width:12%;
+	height:6em;
+	margin-top:10px;
+	padding-left:20px;
+	text-align:left;
+	float:left;
+	left: 18px;
+	line-height:1.3em;	
+}
+#copyRight {
+	width:9%;
+	height:4.0em;
+	margin-top:10px;
+	padding-right:20px;
+	line-height:1.63em;
+	text-align:right;
+	float:right;
+	font-size:80%;
+}
+
+.socialLinks_container {	
+	margin-bottom:0px;
+	*margin-bottom:7px;
+	_margin-bottom:0px;
+}
+#Share_Icons {
+	color:#ffffff !Important; 
+	text-align:center;
+}
+#centerMainLinks {
+	width:73%;
+}
+#centerSubLinks {
+	width:100%;
+	text-align:center;
+}
+/* NEW FOOTER ENDS */
+
+

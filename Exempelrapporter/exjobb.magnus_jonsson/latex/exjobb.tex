@@ -1,0 +1,58 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[icelandic,english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{parskip}
+\usepackage{url}
+\usepackage{pdfpages}
+
+\graphicspath{{./images/}}
+
+\begin{document}	
+	\includepdf[pages={1}]{frontpage.pdf}
+	\newpage
+	\thispagestyle{empty}
+	\mbox{}
+  \includepdf[pages={1}]{abstract.pdf}
+  \newpage
+  \thispagestyle{empty}
+	\mbox{}
+  \newpage
+  \thispagestyle{empty}
+	\mbox{}
+	\section*{Acknowledgements}
+		I would like to thank the following people:
+		\begin {itemize}
+			\item Mattias Palmer, ULL, My  supervisor at Uppsala Learning Lab - For providing me with everything I needed to complete this thesis.
+			\item Erik Isaksson, ULL - For providing me with insights into research done within the ROLE project.
+			\item Uppsala Learning Lab - For giving me free roam around your awesome facilities and giving me my own office wh‌en writing this thesis.
+			\item Effie Law, ETH Zürich - For providing me with results and insights from previous surveys done within the ROLE project.
+			\item Åsa Cajander, Uppsala University, My instructor at Uppsala University - For taking all the time reading this thesis over and over; making sure it is up to academic standards.
+		\end {itemize}
+	\newpage
+	\section*{Reading Instructions}
+		This thesis is structured in the following way: First you will be introduced to the problem and also an explaination as to why it is a problem. Later this thesis will explain how the problem was attacked. The next section will feature research related to this problem ans also deeper examination of the methods used in this thesis, followed by the requirements set by different parties. Two sections will follow explaining the actual methods and the results. Finally the results will be analyzed and discussed.
+		
+		To make this thesis easier to read I have included a guide for those who do not wish to read it from cover to cover:
+		If you are interested in the part of the thesis that reflects on the ROLE project you should read the following sections: 1.1 - Background, 2.1-2.3 - Previous Work. 4 - Interaction design. 5.1.2 and 5.2.1 - Usability Recommendations. 6-8: Analysis, Discussion and Future Work.
+		If you are a usability expert and wants to know how this method was useful or not I would recommend the following sections: 1 - Introduction. 2.4-2.5 - Personas and Interaction Design. 4-5 - Results from Interaction Design and Usability investigation. 7 - Discussion.
+	\newpage
+	\tableofcontents
+	
+	\include {introduction}
+	\include {previous}
+	\include {requirements}
+	\include {design}
+	\include {usability}
+	\include {analysis}
+	\include {discussion}
+	\include {future}
+	
+	\bibliographystyle{plain}
+	\bibliography{references}
+	
+	\include {appendix}
+\end{document}

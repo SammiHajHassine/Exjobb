@@ -1,0 +1,40 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Technical background}{}% 2
+\BOOKMARK [1][-]{subsection.2.2.1}{Single-page applications}{chapter.2}% 3
+\BOOKMARK [2][-]{subsection.2.2.2}{URLs, routes and states}{subsection.2.2.1}% 4
+\BOOKMARK [2][-]{subsection.2.2.3}{API communication}{subsection.2.2.1}% 5
+\BOOKMARK [2][-]{subsection.2.2.4}{Templates}{subsection.2.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.2.5}{Data bindings}{subsection.2.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.2.6}{Testing a Javascript application}{subsection.2.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.2.7}{Search engine optimization}{subsection.2.2.1}% 9
+\BOOKMARK [0][-]{chapter.3}{Design patterns}{}% 10
+\BOOKMARK [1][-]{subsection.3.3.1}{Modularity}{chapter.3}% 11
+\BOOKMARK [2][-]{subsection.3.3.2}{Communication between modules}{subsection.3.3.1}% 12
+\BOOKMARK [2][-]{subsection.3.3.3}{MVC - Model-View-Controller}{subsection.3.3.1}% 13
+\BOOKMARK [2][-]{subsection.3.3.4}{MVVM - Model-View-ViewModel}{subsection.3.3.1}% 14
+\BOOKMARK [0][-]{chapter.4}{Architecture}{}% 15
+\BOOKMARK [1][-]{subsection.4.4.1}{System-level architecture}{chapter.4}% 16
+\BOOKMARK [2][-]{subsection.4.4.2}{Application-level architecture}{subsection.4.4.1}% 17
+\BOOKMARK [2][-]{subsection.4.4.3}{Module-level architecture}{subsection.4.4.1}% 18
+\BOOKMARK [2][-]{subsection.4.4.4}{API communication}{subsection.4.4.1}% 19
+\BOOKMARK [2][-]{subsection.4.4.5}{Initial loading time}{subsection.4.4.1}% 20
+\BOOKMARK [2][-]{subsection.4.4.6}{Search engine optimization}{subsection.4.4.1}% 21
+\BOOKMARK [0][-]{chapter.5}{Implementation}{}% 22
+\BOOKMARK [1][-]{subsection.5.5.1}{Classes and inheritance}{chapter.5}% 23
+\BOOKMARK [2][-]{subsection.5.5.2}{Scopes in Javascript}{subsection.5.5.1}% 24
+\BOOKMARK [2][-]{subsection.5.5.3}{API drivers and push synchronization}{subsection.5.5.1}% 25
+\BOOKMARK [2][-]{subsection.5.5.4}{Writing testable code}{subsection.5.5.1}% 26
+\BOOKMARK [2][-]{subsection.5.5.5}{Dependencies}{subsection.5.5.1}% 27
+\BOOKMARK [2][-]{subsection.5.5.6}{Javascript render API for SEO}{subsection.5.5.1}% 28
+\BOOKMARK [2][-]{subsection.5.5.7}{Deployment}{subsection.5.5.1}% 29
+\BOOKMARK [0][-]{chapter.6}{Verification}{}% 30
+\BOOKMARK [1][-]{subsection.6.6.1}{The test application}{chapter.6}% 31
+\BOOKMARK [2][-]{subsection.6.6.2}{Measuring the initial loading time}{subsection.6.6.1}% 32
+\BOOKMARK [2][-]{subsection.6.6.3}{Measuring the testability}{subsection.6.6.1}% 33
+\BOOKMARK [2][-]{subsection.6.6.4}{Multiple clients}{subsection.6.6.1}% 34
+\BOOKMARK [2][-]{subsection.6.6.5}{Test of a SEO-friendly Javascript site}{subsection.6.6.1}% 35
+\BOOKMARK [0][-]{chapter.7}{Discussion}{}% 36
+\BOOKMARK [1][-]{subsection.7.7.1}{Test-driven development in Javascript}{chapter.7}% 37
+\BOOKMARK [2][-]{subsection.7.7.2}{The importance of delays}{subsection.7.7.1}% 38
+\BOOKMARK [2][-]{subsection.7.7.3}{When to use SPAs}{subsection.7.7.1}% 39
+\BOOKMARK [2][-]{subsection.7.7.4}{Future work}{subsection.7.7.1}% 40

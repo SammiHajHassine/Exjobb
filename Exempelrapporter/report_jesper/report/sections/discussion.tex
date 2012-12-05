@@ -1,0 +1,27 @@
+\chapter{Discussion}
+
+\setcounter{section}{7}
+\setcounter{subsection}{0}
+
+\subsection{Test-driven development in Javascript}
+
+Test-driven development is something that is not used very much today by Javascript developers. If a framework can provide an architecture that helps developers to get around the problem with writing simple unit tests it will most probably be used more than it is today. As seen in the thesis it is possible to achieve high degree of testability if just the testing aspect of the application is considered already in the design phase of the system.
+
+\subsection{The importance of delays}
+
+The initial loading time has been considered as an important aspect of SPAs in the thesis since it directly affects the users. If the users are not satisfied the website will become less popular. However, another study suggests that the time it takes to interact with the website is even more important than the initial loading time \cite{user_interactivity_tolerance}. Users were asked to rate the quality of a service when the delay was varying. The result showed that the tolerance for delay is decreasing over time. Users were more patient the first time the page loaded than when interacting with it later on. This explains why SPAs are so popular, they have a slow initial loading time but that is also when the users are as most patient. It also highlights why SPAs are well suited for websites with a high degree of user interactivity. SPAs perform well after the page has loaded which corresponds to when the patience is decreased.
+
+\subsection{When to use SPAs}
+
+As explained above SPAs are great for all websites that involve a high degree of user interactivity, like websites that are more like applications rather than traditional web pages. They are also great to use for websites that target mobile devices. In some cases SPAs are even considered as an alternative to native mobile applications. If a mobile application is written as a web application there is only one version to maintain. If instead a native application would be developed there would be one version for each operating system. It would of course result in both higher development and maintenance costs. On the other hand the user experience will be a lot better in a native application since it always will be able to perform better than a web application. 
+
+For websites that are dependent on very precise SEO SPAs are most probably not such a good choice. Unless the crawlers start to execute Javascript will a separate solution for SEO always be needed. All these solutions have their limitations, a traditional website does not. Today it is often hard to get tools for web analytics to coop with SPAs, these tools are essential to develop a good SEO strategy. The problem is that since a SPA never reloads the page the user actions will not be posted to the analytics tool, which results in the visitor flow not being analyzed. Another problem with SPAs is that users with accessibility tools, such as screen readers, might have a hard time using the application. Most of these tools have a limited support for websites that asynchronously changes its content, which of course will make SPAs hard to use.
+
+% A well thought-through system design is really helping to get better maintainability. Think of dependencies etc.
+% Using configurable dependencies makes the framework both flexible and smaller
+
+\subsection{Future work}
+
+An interesting question to ask if whether MinimaJS is a realistic alternative to existing frameworks on the market. The framework is of course in an early development phase and more testing is needed before using it in production. Especially browser compatibility is an important aspect when targeting a wider market, this is an aspect that has not been considered at all during the development. However, there is nothing in MinimaJS that is impossible to implement to support the browsers that are popular today. To get it to work in all major browsers it would probably not require too much work. Documentation is another thing that has to be improved, it is an essential aspect to consider to enable other developers to learn the framework.
+
+Since the framework performed very well in the tests compared to its competitors the future is looking bright. Especially when it comes to testing which is something that is becoming an even more important part of the development.

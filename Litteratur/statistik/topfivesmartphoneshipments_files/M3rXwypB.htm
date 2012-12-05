@@ -1,0 +1,1124 @@
+
+<!-- saved from url=(0050)http://accounts.icharts.net/icharts/embed/M3rXwypB -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+						 <title>iCharts</title>
+						 <meta http-equiv="pragma" content="no-cache"> <meta http-equiv="expires" content="-1">
+						 <link type="text/css" rel="stylesheet" href="ichartwidget(1).css">
+						 <script src="cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="plusone.js" gapi_processed="true"></script><script type="text/javascript">						 
+						        
+							var clip1=null;//= new ZeroClipboard.Client();
+							var clip2=null;// = new ZeroClipboard.Client();
+							var clip3=null;// = new ZeroClipboard.Client();
+							var clip4=null;// = new ZeroClipboard.Client();
+							
+							
+							function updateIChartStatsAndGetViewCount()
+							{
+								   //get chart visit count
+									getChartViewCount("105804");
+
+								   //log chart view event
+								   logChartAnalytics(EVENT_CODE_CHART_VIEW,"none");
+							}	
+
+							/**
+							* Called from within chart swf, once the swf is loaded. Remove the fast loading image, so that 
+							* swf is seen
+							*/
+							function onChartSwfLoadComplete(chartid)
+							{
+							
+							
+								try
+								{
+								 	// hide fast loading image
+								 	document.getElementById("fastloadingimage").style.visibility ="hidden";
+								 	document.getElementById("activityIndicator").style.visibility ="hidden";
+								 	
+								 	
+									updateIChartStatsAndGetViewCount();
+									if(parent != null)
+									{
+										parent.onswfloadcomplete(chartid);	
+									}
+								}
+								catch(e){
+									// alert('An error has occurred: '+e.message)
+								}
+							}	
+							function shareSocialShare(param)
+							{
+								var link ="http://www.idc.com/getdoc.jsp?containerId=prUS23299912";
+								
+								var imageUrl= "http://accounts.icharts.net/icharts/chartImage.jsp?id=M3rXwypB";
+								var shareUrl="";
+								var chartTitle=" Top Five Worldwide Smartphone Vendors, 4Q 2011,           Five Quarter Market Share Changes (Units)";
+								var chartDescription="IDC released the top five smartphone vendors in the world.";
+								//alert(link);
+								
+								chartTitle = encodeURIComponent(chartTitle);
+								
+								//replace <br> with \n for chart Tags and Descrition							 
+								chartDescription=chartDescription.replace(/<br>/g,"\n");
+								chartDescription = encodeURIComponent(chartDescription); 
+								//add title for twitter share
+								if(param =="TWITTER")
+								{
+								//	link =link +" "+chartTitle;
+								}
+								link = encodeURIComponent(link);
+								switch (param)
+								{
+									case 'FACEBOOK':
+									  shareUrl ="https://www.facebook.com/dialog/feed?app_id=292021724237786&link="+link+"&picture="+imageUrl+"&name="+chartTitle+"&redirect_uri=http://www.facebook.com";
+									  break;
+									case 'TWITTER':
+									  shareUrl = "http://twitter.com/home?status=" + link;
+									  break;
+									case 'LINKEDIN':
+									   shareUrl = "http://www.linkedin.com/shareArticle?mini=true&title="+chartTitle+"&source=www.icharts.net&url=" + link+"&summary="+chartDescription;
+									  break;
+									case 'PINTEREST': 
+									   shareUrl = "http://pinterest.com/pin/create/button/?url="+"http://www.icharts.net/chartchannel/top-five-worldwide-smartphone-vendors-4q-2011-five-quarter-market-share-changes-units_m3rxwypbc"+"&media="+"http://accounts.icharts.net/icharts/chartImage.jsp?id=M3rXwypB";
+									  // alert(shareUrl);
+									  break;  
+									default:
+									  //do nothing
+								}									
+								window.open(shareUrl);
+							} 
+							function showHideSharePopup()
+							{
+								if( shareChartPopup.style.display =="block")
+								{
+									shareChartPopup.style.display ="none";
+									if(clip1 != null)
+									{
+										clip1.hide();
+										clip1 = null;
+									}
+									if(clip2 != null)
+									{
+										clip2.hide();
+										clip2 = null;
+									}
+									if(clip3 != null)
+									{
+										clip3.hide();
+										clip3 = null;
+									}
+									if(clip4 != null)
+									{
+										clip4.hide();
+										clip4 = null;
+									}
+								}else
+								{
+									var width=0;
+									var height =0;
+									var popupWidth= 370;
+									var popupHeight= 332;
+									var movTop=0;
+									var movBot=0;
+									
+									if (navigator.appName.indexOf("Microsoft")!=-1) {
+										height = document.body.clientHeight ;
+										width = document.body.clientWidth ;
+									}else{
+										height = window.innerHeight;
+										width = window.innerWidth ;
+									}
+									if(width < 375)
+									{
+										popupWidth= 290;
+										popupHeight = 320;									
+									}
+									movTop =(height- popupHeight)/2;
+									movBot = (width - popupWidth)/2;
+									
+									if(movTop < 0 )
+									{
+										movTop =0;
+									}
+									if( movBot <0 )
+									{	
+										movBot =0;
+									}	
+									
+									//replace <br> with \n for chart embed code
+									var chartEmbedCode=document.getElementById("embedCode").value;								 
+									chartEmbedCode=chartEmbedCode.replace(/<br>/g,"\n");	
+									document.getElementById("embedCode").value =chartEmbedCode;
+							
+									moveObject(document.getElementById('shareChartPopup'),movTop,movBot);
+									 
+									shareChartPopup.style.display ="block";
+									
+									document.getElementById("btn_copyEmbed").innerHTML	="click to copy";	
+									document.getElementById("btn_copyurl").innerHTML	="click to copy";	
+								
+									document.getElementById("emailSenderName").value="";	
+									document.getElementById("emailToSend").value="";	
+									document.getElementById("emailBody").value="Hello,\n\nI thought you would be interested in this. Take a look!";	
+								
+									//copytoclipboard('btn_copyEmbed','embedCode','wrapper_btn_copyurl',clip1);
+									//copytoclipboard('btn_copyurl','shareChartUrl','wrapper_btn_copyurl',clip2);
+									//copytoclipboard('embedCode','embedCode','wrapper_btn_copyurl',clip3);
+									copytoclipboard('shareChartUrl','shareChartUrl','wrapper_btn_copyurl',clip4);
+									
+								}
+								setListenersForChartInformationPopup();
+							}
+							function copytoclipboard(btn,tgt, btncontainer,clip)
+							{	
+						        if(clip == null)
+							    {
+									clip = new ZeroClipboard.Client();
+									if(document.getElementById(btncontainer) != null){
+										//console.log("container");								 
+										clip.glue(btn,btncontainer);
+									}else{
+										//console.log("no container");
+										clip.glue(btn);
+									}
+									
+									if(btn =="btn_copyEmbed"){										
+										clip1 = clip;
+									}else  if(btn =="btn_copyurl"){										
+										clip2 = clip;
+									}else if(btn =="embedCode"){										
+										clip3 = clip;
+									}else if(btn =="shareChartUrl"){									
+										clip4 = clip;
+									}
+            					  }
+								//console.log(clip);
+
+								clip.setText( '' ); // will be set later on mouseDown
+								clip.setHandCursor( true );
+								clip.show();
+								//ZeroClipboard.setMoviePath( 'resources2.0/others/ZeroClipboard.swf');
+
+								clip.addEventListener( 'load', function(client) {
+									// alert( "movie is loaded" );
+									//console.log("movie loaded");
+									//reposition the flash movie
+									clip.reposition();
+								} );
+
+								clip.addEventListener( 'complete', function(client, text) {
+									//alert("Copied text to clipboard: " + text );
+								} );
+								
+								clip.addEventListener( 'mouseDown', function(client) {
+									// set text to copy here
+									clip.setText( document.getElementById(tgt).value );
+									//console.log('mousedown');
+									//document.getElementById(btn).innerHTML	="copied";	
+									//alert(document.getElementById(tgt).value+"");
+									if(btn == "embedCode")
+									{
+										document.getElementById("btn_copyEmbed").innerHTML	="copied";	
+									}else if(btn == "shareChartUrl")
+									{
+										document.getElementById("btn_copyurl").innerHTML	="copied";	
+									}else
+									{
+										document.getElementById(btn).innerHTML	="copied";	
+									}
+								 
+									//call the chart anlytics method to log the embed click event
+									if(clip== clip1 || clip== clip3)
+									{
+										logChartAnalytics(EVENT_CODE_EMBED,"none");
+									}						
+									if(clip== clip2 || clip== clip4)
+									{
+										logChartAnalytics(EVENT_CODE_URL,"none");
+									}
+									//clip.hide();
+								});
+							}	
+							function showHideChartInfo(elementId)
+							{  
+								var htmlElement = document.getElementById(elementId);
+								var movTop=0;
+								var movBot=0;
+								
+								
+								//replace <br> with \n for chart Tags and Decrition
+								var chartDescruption= document.getElementById("chartDescriptionTextArea").value;
+								chartDescruption=chartDescruption.replace(/<br>/g,"\n");								
+								document.getElementById("chartDescriptionTextArea").value =chartDescruption;
+								
+								var chartTags = document.getElementById("chartTagsTextArea").value;		
+								chartTags=chartTags.replace(/<br>/g,"\n");								
+								document.getElementById("chartTagsTextArea").value =chartTags;
+								
+								if(htmlElement)
+								{								 
+									if( htmlElement.style.display =="block")
+									{
+										htmlElement.style.display ="none";
+									}else
+									{			 
+										var width=0;
+										var height =0;
+										var popupWidth= 370;
+										var popupHeight= 332;									
+									
+									    if (navigator.appName.indexOf("Microsoft")!=-1) {
+											height = document.body.clientHeight ;
+											width = document.body.clientWidth ;
+										}else{
+											height = window.innerHeight;
+											width = window.innerWidth ;
+										}	
+
+										if(width < 375)
+										{
+											popupWidth= 290;
+											popupHeight = 320;									
+										}	
+										
+										movTop =(height- popupHeight)/2;
+										movBot = (width - popupWidth)/2;
+										
+										if(movTop < 0 )
+										{
+											movTop =0;
+										}
+										if( movBot <0 )
+										{	
+											movBot =0;
+										}	
+										moveObject(htmlElement,movTop,movBot);
+										//htmlElement.style.top ="78px";
+										//htmlElement.style.left = "78px";
+										htmlElement.style.display ="block"; 	
+										setListenersForChartInformationPopup();
+									}
+								}
+							}
+							function onFormSubmit()
+							{ 								
+							    return false;
+							}
+						   /*
+							* This javascript file is needed to move the share this chart 
+							* popups are draggable.
+							*/
+
+							var isIE=document.all;
+							var isNN=!document.all&&document.getElementById;
+							var isN4=document.layers;
+							var isHot=false;
+
+							/**
+							* Set/Reset the listeners for the register popup
+							*/
+							function setListenersForChartInformationPopup()
+							{
+								clearListenersForChartInformation();
+								document.onmousedown = ddInitForChartInformationPopup;
+							}
+
+							/**
+							* Reset the listeners.
+							*/
+							function clearListenersForChartInformation()
+							{
+								// If the browser is not IE,
+								if(!isIE)
+								{
+									document.removeEventListener('onmousedown',ddInitForChartInformationPopup,false);
+								}
+								else
+								{
+									document.detachEvent('onmousedown', ddInitForChartInformationPopup);
+								}
+							}
+
+							function ddInitForChartInformationPopup(e){
+							
+								var elementId="";
+								var titleBarId="";
+								var eventObjId="";
+								var sharePopup=false;
+								topDog=isIE ? "BODY" : "HTML";	
+								eventObjId=isIE ? event.srcElement.id : e.target.id;
+					 
+								if( eventObjId=="titleBarH1")
+								{
+									elementId="shareChartPopup";
+									titleBarId ="titleBar";
+									sharePopup = true;
+								}else if( eventObjId=="chartDetailsTitleBarH1")
+								{
+									elementId="chartdetails";
+									titleBarId ="infoChartPopupTitleBar";
+									sharePopup =false;
+								}
+								if(elementId !="" && titleBarId !="")
+								{
+									if(sharePopup)
+									{
+										whichDog=isIE ? document.all.shareChartPopup : document.getElementById(elementId);
+									}
+									else
+									{
+										whichDog=isIE ? document.all.chartdetails : document.getElementById(elementId);
+									}
+									hotDog=isIE ? event.srcElement : e.target;
+									while (hotDog.id!= titleBarId &&hotDog.tagName!=topDog){
+										hotDog=isIE ? hotDog.parentElement : hotDog.parentNode;
+									}
+									if (hotDog.id==titleBarId){
+										offsetx=isIE ? event.clientX : e.clientX;
+										offsety=isIE ? event.clientY : e.clientY;
+										nowX=parseInt(whichDog.style.left);
+										nowY=parseInt(whichDog.style.top);
+										ddEnabled=true;
+										document.onmousemove=dd;
+									}
+								}
+							}
+
+							function dd(e){
+								try
+								{
+								if (!ddEnabled) return true;
+									whichDog.style.left=isIE ? nowX+event.clientX-offsetx : nowX+e.clientX-offsetx;
+									whichDog.style.top=isIE ? nowY+event.clientY-offsety : nowY+e.clientY-offsety;
+									return false;
+								}catch(error)
+								{
+									//
+								}
+							}
+
+							function ddN4(whatDog){
+								if (!isN4) return;
+									N4=eval(whatDog);
+									N4.captureEvents(Event.MOUSEDOWN|Event.MOUSEUP);
+									N4.onmousedown=function(e){
+									N4.captureEvents(Event.MOUSEMOVE);
+									N4x=e.x;
+									N4y=e.y;
+								}
+								N4.onmousemove=function(e){
+									if (isHot){
+										N4.moveBy(e.x-N4x,e.y-N4y);
+										return false;
+									}
+								}
+								N4.onmouseup=function(){
+								N4.releaseEvents(Event.MOUSEMOVE);
+								}
+							}
+
+							document.onmouseup = Function("ddEnabled=false");
+							
+							/**
+							*change class on span mouse over
+							*/							
+							function onHeaderSpanMoseOver(elementId)
+							{  
+								var htmlElement = document.getElementById(elementId);
+							    var className="";
+								 
+								if(htmlElement)
+								{									
+									if(elementId=="infoSpan")
+									{ 
+										className="aShare aInfohOverImage";
+										 
+									}else if(elementId=="infoClip")
+									{
+										className="aShare aCliphOverImage";
+									}else if(elementId=="infoChartLogo")
+									{
+										className="aShare aChartLogohOverImage";
+									}else
+									{
+										className="aShare aSharehOverImage";
+									}									
+									//htmlElement.setAttribute("class",className);	
+									htmlElement.className = className;									
+								}
+							}
+							/**
+							*change class on span mouse over
+							*/							
+							function onHeaderSpanMoseOut(elementId)
+							{  
+								var htmlElement = document.getElementById(elementId);
+							    var className=""; 
+								if(htmlElement)
+								{									
+									if(elementId=="infoSpan")
+									{ 
+										className="aShare aInfoImage";
+										 
+									}else if(elementId=="infoClip")
+									{
+										className="aShare aClipImage";
+									}else if(elementId=="infoChartLogo")
+									{
+										className="aShare aChartLogoImage";
+									}else
+									{
+										className="aShare aShareImage";
+									}		
+									//htmlElement.setAttribute("class",className);	
+									htmlElement.className = className;									
+								}
+							}
+							/**
+							*method gets called on footer button clicked
+							* it calls the flex widget method to perform selected option
+							*/							
+							function onLinkButtonClicked(buttonLable)
+							{ 
+								//get flex application to call the flex method
+								try
+								{ 
+									getFlexApp('icharts').onLinkButtonClicked(buttonLable);
+								}catch(error)
+								{
+								   //
+								}
+							}
+							// Internet Explorer and Mozilla-based browsers refer to the Flash application
+							// object differently.
+							// This function returns the appropriate reference, depending on the browser.
+							function getFlexApp(appName) 
+							{
+								if (navigator.appName.indexOf ("Microsoft") !=-1) 
+								{
+									return window[appName];
+								} else 
+								{
+									return document[appName];
+								}
+							} 
+							/**
+							* returns the chart height passed from iframe, if not found return the height found from IChartSummary object
+							*/	
+							function getChartHeight() 
+							{
+								try
+								{
+									var chartHeightFound = "";
+									if (navigator.appName.indexOf("Microsoft")!=-1) {
+										chartHeightFound = document.body.clientHeight ;
+									} else {
+										chartHeightFound = window.innerHeight;
+									}
+									if (null != chartHeightFound && chartHeightFound != "") {
+										return parseInt(chartHeightFound) - 24 - 26;
+									} else {
+										return 514;
+									}
+								}catch(error)
+								{
+								  // alert(error.message);
+								  return 0;
+								}
+							}
+							/**
+								returns the iframe width
+							**/							
+							function getChartWidth() 
+							{
+								try
+								{
+									var chartWidthFound = "";
+									if (navigator.appName.indexOf("Microsoft")!=-1) {
+										chartWidthFound = document.body.clientWidth ;
+									} else {
+										chartWidthFound = window.innerWidth;
+									}
+									if (null != chartWidthFound && chartWidthFound != "") {
+										return parseInt(chartWidthFound);
+									} else {
+										return 585;
+									}
+								}catch(error)
+								{
+								  // alert(error.message);
+								  return 0;
+								}
+							}
+							/**
+							   loads the chart css accoring to size
+							*/
+							function loadWidgetCss() {
+							
+								//change css name if the  chart width  is small
+								var widgetCss="";
+								if(getChartWidth() < 375 || getChartHeight() < 375)
+								{
+									widgetCss="ichartwidget_smallpopup.css";
+								}else
+								{
+									widgetCss="ichartwidget.css";
+								}
+								
+								widgetCss = widgetCss+"?"+"5.5";							     
+								loadCssFile("http://accounts.icharts.net/widget/assets/"+widgetCss);
+							}
+							/**
+							    loads the css file 
+							*/
+							function loadCssFile(filename){
+								var fileref=document.createElement("link")
+								fileref.setAttribute("rel", "stylesheet")
+								fileref.setAttribute("type", "text/css")
+								fileref.setAttribute("href", filename)
+							  
+								if (typeof fileref!="undefined") {
+									document.getElementsByTagName("head")[0].appendChild(fileref)
+								}
+							}
+							/**
+							*event codes for the chart analytics
+							*/
+						 
+							var EVENT_CODE_CHART_VIEW = "1001" 
+							var EVENT_CODE_SHARE = "1002";
+							var EVENT_CODE_FACEBOOK = "1003";
+							var EVENT_CODE_GOOGLE_PLUS = "1004";
+							var EVENT_CODE_LINKED_IN = "1004";
+							var EVENT_CODE_TWITTER = "1005";
+							var EVENT_CODE_EMBED = "1006";
+							var EVENT_CODE_URL = "1007";
+							var EVENT_CODE_SEND = "1008";
+							var EVENT_CODE_CLIP = "1009";
+							var EVENT_CODE_CLIP_CREATE_ACCOUNT = "1010";
+							var EVENT_CODE_CLIP_LOGIN = "1011";
+							var EVENT_CODE_INFO = "1012";
+							var EVENT_CODE_AUTHOR_URL = "1013";
+							var EVENT_CODE_SAVE = "1014";
+							var EVENT_CODE_PRINT = "1015";
+							var EVENT_CODE_ICHARTS_LOGO = "1016";
+							var EVENT_CODE_HYPERLINK_CHART = "1017"; 
+							var EVENT_CODE_CHART_FILTER = "1018";
+							var EVENT_CODE_POWER_VIEWS = "1019";
+							
+							/**
+							* gets
+							*/
+							function logChartAnalytics(eventCode,target)
+							{
+								var userName ="icharts@idc.com";
+								var accountName ="IDC";
+								var chartName = "(February 6, 2012) Top Five Smartphone Vendors WW";
+								var chartUrl = "http://www.idc.com/getdoc.jsp?containerId=prUS23299912";
+								var chartId = "105804";
+								var publishState = "PUBLIC_PUBLISHED";
+								var chartViewLocation = "http://www.idc.com/getdoc.jsp?containerId=prUS23299912";
+								var eventDate = new Date();								
+								var flashEnabled = "0";
+								if(getFlexApp('icharts'))
+								{
+									flashEnabled = "1";
+								} 
+								//alert(publishState);
+								updateChartAnalytics(eventCode,eventDate.toUTCString(), chartId, chartName, chartViewLocation, target, userName, accountName,publishState,flashEnabled)
+							}
+							
+							/**
+							*gets the chart view count for chart id
+							*by calling the webservice which accepts the chart id and 
+							*returns the view  chart view counts
+							*/
+							function getChartViewCount(chartId)
+							{
+								var dataString = 'chart_id='+ chartId;
+								var webserviceurl = "http://stat.icharts.net/logger-icharts/get_chart_views.php";
+								//dataString="chart_id=109050";
+								//serUrl = "";
+								
+								//$.browser.msie && window.XDomainRequest
+								  if ($.browser.msie) {
+									// Use Microsoft XDR	
+									if(window.XDomainRequest)
+									{
+										var xdr = new XDomainRequest();
+								 		if(xdr)
+											{//xdr.contentType = "text/plain";	
+											webserviceurl = webserviceurl+"?"+dataString+"&"+Math.round(new Date().getTime());
+											xdr.open("GET", webserviceurl);
+										 
+											//xhr.timeout = -1;
+											xdr.onload = function() {
+												var result = $.trim(xdr.responseText); 
+												if(result == "")
+												{
+													result = 2;
+												}else
+												{
+													result = parseInt(result) + 1;
+												}										 
+												$("#chartHeaderViewCount").html(result+" VIEWS");										
+											};
+											xdr.ontimeout  = function() {
+												$("#chartHeaderViewCount").html("NA VIEWS");
+											};
+											
+											xdr.onerror  = function(){
+												$("#chartHeaderViewCount").html("NA VIEWS");
+											};
+											xdr.send();
+										} else
+										{
+											$("#chartHeaderViewCount").html("NA"+" VIEWS");
+										}
+									} else
+									{
+										$("#chartHeaderViewCount").html("NA"+" VIEWS");
+									}
+								} else {							
+									 $.ajax({
+										type: "POST",
+										url: webserviceurl, 
+										data: dataString,
+										cache: false, 
+										success: function(result) {
+											//update chart view count 
+											result = $.trim(result); 
+											if(result == "")
+											{
+												result = 2;
+											}else
+											{
+												result = parseInt(result) + 1;
+											}										 
+											$("#chartHeaderViewCount").html(result+" VIEWS");
+										},
+									    error: function(msg) {
+										//on error
+										$("#chartHeaderViewCount").html("NA"+" VIEWS");										 
+									  }
+									});			
+								}									
+							}
+							
+							/**
+							*method updates the chart analytics 
+							*it accepts the chart id and event type as parameter
+							*and calls the web -service to update the values
+							*/							
+							function updateChartAnalytics(eventCode, eventDate, chartId, chartName, chartViewLocation, target, userName, accountName, publishState, flashEnabled)
+							{
+								var dataString = 'eventCode='+ eventCode + '&eventDate='+ eventDate +'&chartId='+ chartId + '&chartName='+ chartName +'&chartViewLocation=' + chartViewLocation+ '&target=' + target+ '&userName=' + userName+ '&accountName=' + accountName+ '&publishState=' + publishState+ '&flashEnabled=' + flashEnabled;
+								var webserviceurl ="http://stat.icharts.net/logger-icharts/chart_widget_log.php";
+								if ($.browser.msie) { 
+									if ( window.XDomainRequest) {
+									  //if IE	
+										var xdr = new XDomainRequest();
+										if(xdr)
+										{
+											webserviceurl = webserviceurl+"?"+dataString+"&"+Math.round(new Date().getTime());
+											xdr.open("GET", webserviceurl);
+											//xhr.timeout = -1;
+											xdr.onload = function() {
+												//on sucess do nothing								
+											}; 
+											xdr.onerror  = function(){
+												//on error
+											};
+											xdr.send();
+										}  
+									}else
+									{
+										//ie don't support XDomainRequest
+									}
+								}else {																 
+										$.ajax({
+										type: "POST",
+										url: webserviceurl,
+										data: dataString, 
+										cache: false, 
+										success: function(msg) {
+											//on success
+										},
+										error: function(msg) {									 
+											//on error
+										}
+									}); 
+								} 
+							}
+							/**
+							*add the mouse click event listener for  
+							*all the evnet source such as button for which
+							*chart analytics is to be done.
+							*/	  
+							function addEventListenerForChartAnalytics()
+							{	
+								//on share click
+							 	$("#infoShare").click(function(){	 
+									logChartAnalytics(EVENT_CODE_SHARE,"none");
+								});
+								//on clip click
+								$("#infoClip").click(function(){	 
+									logChartAnalytics(EVENT_CODE_CLIP,"none");
+								});
+								//on info click
+								$("#infoSpan").click(function(){	 
+									logChartAnalytics(EVENT_CODE_INFO,"none");
+								});
+								//on chart logo click
+								$("#infoChartLogo").click(function(){	 
+									logChartAnalytics(EVENT_CODE_ICHARTS_LOGO,"none");
+								});
+								//on save click
+								$("#saveSpan").click(function(){							  
+									logChartAnalytics(EVENT_CODE_SAVE,"none");
+								});
+								//on save click
+								$("#printSpan").click(function(){	 
+									logChartAnalytics(EVENT_CODE_PRINT,"none");
+								});
+								//on send click
+								 $("#submit_btn").click(function(){							  
+									//var emailSenderName = $("input#emailSenderName").val();
+									var emailToSend = $("input#emailToSend").val();
+									//var emailBody = $("textarea#emailBody").val();
+									emailToSend = $.trim(emailToSend);
+									if(emailToSend != null && emailToSend != "" && validateEmail(emailToSend))
+									{
+										logChartAnalytics(EVENT_CODE_SEND,"none");
+									}
+								});
+								//on copy button click
+								$("#btn_copyEmbed").click(function(){
+									logChartAnalytics(EVENT_CODE_EMBED,"none");
+								});
+								//on copy url click
+								$("#btn_copyurl").click(function(){		 
+									logChartAnalytics(EVENT_CODE_URL,"none");
+								});
+								//on embed text input click
+								$("#embed").click(function(){			 
+									logChartAnalytics(EVENT_CODE_EMBED,"none");
+								});
+								//on cahrt url input click
+								$("#shareChartUrl").click(function(){ 
+									logChartAnalytics(EVENT_CODE_URL,"none");
+								});
+								//on facebook click
+								$("#facebookimg").click(function(){	 
+									logChartAnalytics(EVENT_CODE_FACEBOOK,"none");
+								});
+								//on twitter click
+								$("#twitterimg").click(function(){			 
+									logChartAnalytics(EVENT_CODE_TWITTER,"none");
+								});
+								//on linked in click
+								$("#linkedinimg").click(function(){			 
+									logChartAnalytics(EVENT_CODE_LINKED_IN,"none");
+								});
+								//on pinterest in click
+								$("#pinterestimg").click(function(){			 
+									//logChartAnalytics(EVENT_CODE_LINKED_IN,"none");
+								});								
+								$("#gplusonetd").click(function(){	 
+									logChartAnalytics(EVENT_CODE_GOOGLE_PLUS,EVENT_TYPE_GOOGLE_PLUS,"none");
+								});  
+								//on chart author of info popup click
+								$("#chartwidgetlinkInfo").click(function(){		 
+									logChartAnalytics(EVENT_CODE_AUTHOR_URL,"none");
+								}); 
+								//on cahrt author of footer click
+								$("#chartfooterAuthorlink").click(function(){		 
+									logChartAnalytics(EVENT_CODE_AUTHOR_URL,"none");
+								});
+								//on cahrt author of footer click
+								$("#clipChartLink").click(function(){		 
+									var clipChartUrl = "";
+									var chartViewLocation = "http://www.idc.com/getdoc.jsp?containerId=prUS23299912";									 						
+									var flashEnabled = "0";
+									if(getFlexApp('icharts'))
+									{
+										flashEnabled = "1";
+									} 
+									clipChartUrl = 'http://accounts.icharts.net/gallery2.0/app?page=freeaccountsignuppopup&service=external&sp=S'+'M3rXwypB'+"&sp=SCLIP"+"&sp=S"+chartViewLocation+"&sp=S"+flashEnabled
+									clipChart(clipChartUrl);
+									return false;
+								});								 
+							}
+							
+							function validateEmail(email) 
+							{ 
+								var re =/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+								return re.test(email);
+							} 
+							
+						 </script>
+						 <!-- Place this tag in your head or just before your close body tag -->
+						 <script type="text/javascript" src="ichartwidget-merged.js"></script>
+						 <script type="text/javascript">
+							 
+							//show chart on body load for IE
+							//because its not return height at time of script execution
+							//does not return the height in IE 
+							var isChartShown=false;
+							$(document).ready(function(){							  
+							   showChartOnLoad();	
+							   //adjust the fastloadng image width and height
+							    var chartHeight = getChartHeight();
+								var chartWidth = getChartWidth();
+									
+								$("#fastloadingimage").width(chartWidth-2);	
+								$("#fastloadingimage").height(chartHeight); 
+								 
+								//set activityIndicator position at center
+								$("#activityIndicator").css({ top: (chartHeight/2 -50 + 24), left: (chartWidth/2-52)});
+							   
+								//add event listener
+								addEventListenerForChartAnalytics(); 
+								
+								if($("#chartfooterAuthorlink").length > 0 )
+								{
+									var chartWidth = getChartWidth();
+									var chartAuthor= $("#chartfooterAuthorlink").html();
+									
+									//replace the spaces with html character 
+									chartAuthor = chartAuthor.replace(/ /gi, "&nbsp;");
+									//$("#chartfooterAuthorlink").html("icharts icharts");
+									//show the limited no of characters
+									var chartFooterAuthorWidth = $("#chartfooterAuthorlink").width();
+									var extraWidth = 165; //width of info link, chart by text and ichart logo
+									if($("#chartfooterSave").length > 0)
+									{
+										extraWidth = $("#chartfooterSave").width() + extraWidth ;
+									}
+									
+									if( chartFooterAuthorWidth > (chartWidth - extraWidth)) 
+									{  
+										var charWidth = 10;//chartFooterAuthorWidth / chartAuthor.length +4;
+									 	var noOfCharToShow = (chartWidth - extraWidth) / charWidth; //235 width of info save print and logo with
+									   
+										if(noOfCharToShow > 5)
+										{
+										//	$("#chartfooterAuthorlink").html(chartAuthor);
+											var chartAuthorToolTip= $("#chartfooterAuthorlink").text(); 
+											//chartAuthorToolTip = chartAuthorToolTip.replace(/&nbsp;/gi, " ");  
+											$("#chartfooterAuthorlink").attr("title", chartAuthorToolTip);											
+											$("#chartfooterAuthorlink").html(chartAuthor.substring(0,noOfCharToShow));//+"..."
+											//$("#chartfooterAuthorlink").attr("title", chartAuthor);
+											
+											var widthOfAuthorText = $("#chartfooterAuthorlink").width();
+											//if the widthOfAuthorText is less than available width  
+											if(widthOfAuthorText < (chartWidth - extraWidth))
+											{
+												noOfCharToShow = (chartWidth - extraWidth ) /((widthOfAuthorText / noOfCharToShow) +1);
+												$("#chartfooterAuthorlink").html(chartAuthor.substring(0,noOfCharToShow));								
+											}
+											//check the width if it more then decrease the no of character to show
+											
+											widthOfAuthorText = $("#chartfooterAuthorlink").width();
+											//if the widthOfAuthorText is less than available width  
+											if(widthOfAuthorText > (chartWidth - extraWidth))
+											{
+												noOfCharToShow =  (chartWidth - extraWidth ) /((widthOfAuthorText / noOfCharToShow)) -10;
+											 	$("#chartfooterAuthorlink").html(chartAuthor.substring(0,noOfCharToShow));								
+											}
+										}else
+										{
+											$("#chartfooterAuthorlink").html("");
+											$("#chartFooterChartByLabel").html("");
+										}										
+									}else
+									{
+										$("#chartfooterAuthorlink").html(chartAuthor);
+									}
+								}
+								 
+							 });
+													 
+							function showChartOnLoad() {								
+								if( isChartShown ==false) {
+									var chartHeight = getChartHeight();
+									var chartWidth = getChartWidth();
+									if(chartHeight > 0){
+									
+										//update tehe style of nonFlashBrowserContent from 'none' to 'table-cell';
+										if(nonFlashBrowserContent)
+										{
+											//document.getElementById("nonFlashBrowserContent").style.display ="table-cell";
+											$("#nonFlashBrowserContent").attr("style", "display:table-cell");
+											
+											//Alert($("nonFlashBrowserContent"));
+											isChartShown = true;	
+											var flashvars = {id:"M3rXwypB&embedPageUrl=http%3A%2F%2Fwww.idc.com%2Fgetdoc.jsp%3FcontainerId%3DprUS23299912&showApiLoadingImage=0"};
+											var params = {wmode:"transparent",allowscriptaccess:"always",isPrivate:"0", classid:"D27CDB6E-AE6D-11cf-96B8-444553540000" };
+											var attributes = { name:"icharts"};
+											swfobject.embedSWF("http://accounts.icharts.net/widget/icharts2.0.swf?5.5", "nonFlashBrowserContent", chartWidth, chartHeight, "9.0.0", false, flashvars, params, attributes);	
+											
+											// check if flash is available. If not, call .updateIChartStatsAndGetViewCount, because it won't be triggered from flex chart
+											// as flex is not loaded
+											
+											if(swfobject.getFlashPlayerVersion().major == "0")
+											{
+												// remove activity image
+												document.getElementById("activityIndicator").style.visibility ="hidden";
+												
+
+												
+												updateIChartStatsAndGetViewCount();
+											}
+										}
+									}
+								}	
+							}
+							
+
+							//load css file according the chart size
+							//loadWidgetCss();
+							</script>  
+						  		<!-- Place this render call where appropriate -->
+								<script type="text/javascript">
+						  		(function() 
+						  		{
+									var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+									po.src = 'https://apis.google.com/js/plusone.js';
+									var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+						  		})();
+						  </script>  
+
+
+						 <script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/document_iterator.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/find_proxy.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/get_html_text.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/global_constants.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/name_injection_builder.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/number_injection_builder.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/menu_injection_builder.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/string_finder.js"></script><script src="chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/change_sink.js"></script><meta name="document_iterator.js"><meta name="find_proxy.js"><meta name="get_html_text.js"><meta name="global_constants.js"><meta name="name_injection_builder.js"><meta name="number_injection_builder.js"><meta name="menu_injection_builder.js"><meta name="string_finder.js"><meta name="change_sink.js"></head>
+					 	
+					 	<body topmargin="0" leftmargin="0" onload="showChartOnLoad()" style="margin:0px;padding:0px;background-color:transparent;overflow:hidden;" width="100%" height="100%">
+	 						 			
+						<div id="chartHeader" style="background:#F0EFEF;border: 1px solid #999999;padding-left:5px;padding-right:5;height:23px;display:block;" width="100%">
+							<div style="position:absolute;background:#F0EFEF;left:5;float:left;top:5px;width:55px"><a onclick="showHideSharePopup(); return false" rel="nofollow"><span id="infoShare" class="aShare aShareImage" onmouseover="onHeaderSpanMoseOver(&#39;infoShare&#39;)" onmouseout="onHeaderSpanMoseOut(&#39;infoShare&#39;)">&nbsp;</span></a></div>
+							<div style="position:absolute;background:#F0EFEF;left:70;float:left;width:40px;top:5px"><a id="clipChartLink" rel="nofollow"><span id="infoClip" class="aShare aClipImage" onmouseover="onHeaderSpanMoseOver(&#39;infoClip&#39;)" onmouseout="onHeaderSpanMoseOut(&#39;infoClip&#39;)">&nbsp;</span></a></div>	
+							
+							<div align="right" id="chartHeaderViewCount" class="chartHeaderViewCount">518118 VIEWS</div>		
+						</div>
+						<div style="position:absolute;display:none" id="shareChartPopup">
+							<div style="display:none"><ilayer width="100%" onselectstart="return false">
+								<layer width="100%" onmouseover="isHot=true;if (isN4) ddN4(shareChartPopup)" onmouseout="isHot=false">
+								   <img src="" class="windowTopic">
+								</layer>
+								</ilayer>
+							</div>
+							<div id="titleBar" class="shareChartPopupTitleBar">							
+								<a id="popupChartClose" onclick="showHideSharePopup()" style="cursor: pointer;margin-left:15px;">x</a>
+								<h1 id="titleBarH1" style="width:100%;">&nbsp;SHARE CHART</h1> 
+							</div>	
+ 							
+							<div style="width:90%;margin-top:0px;margin-left:15px;margin-right:15px;margin-top:10px">
+								<span style="display:block;margin-top:6px;margin-bottom:6px">SOCIAL</span>	
+								<table>
+									<tbody><tr>
+										<td width="32px"><img id="facebookimg" class="facebook_icon" width="28" height="24" title="Facebook" alt="Facebook" style="cursor: pointer;" src="img_trans.gif" onclick="shareSocialShare(&#39;FACEBOOK&#39;)"></td>
+										<td width="32px"><img id="pinterestimg" class="pinterest_icon" width="28" height="24" style="cursor: pointer;" title="Pinterest" alt="Pinterest" src="img_trans.gif" onclick="shareSocialShare(&#39;PINTEREST&#39;)"></td>
+										<td width="32px"><img id="twitterimg" class="twitter_icon" width="28" height="24" title="Twitter" alt="Twitter" style="cursor: pointer;" src="img_trans.gif" onclick="shareSocialShare(&#39;TWITTER&#39;)"></td>
+										<td width="48px" id="gplusonetd"><div style="height: 24px; width: 38px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; background-position: initial initial; background-repeat: initial initial;" id="___plusone_0"><iframe allowtransparency="true" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 38px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1353660475032" name="I0_1353660475032" src="fastbutton.htm" title="+1"></iframe></div></td>
+										<td width="32px"><img id="linkedinimg" class="linkedin_icon" width="28" height="24" style="cursor: pointer;" title="Linked In" alt="Linked In" src="img_trans.gif" onclick="shareSocialShare(&#39;LINKEDIN&#39;)"></td>
+									</tr><tr>
+								</tr></tbody></table>																
+								<hr noshade="" size="1">	
+							</div> 	
+							<div style="width:100%;margin-top:10px;margin-left:15px;margin-right:15px;">
+								<form name="contact" method="post" action="" onsubmit="return onFormSubmit()">							 	
+									<div class="wrapper_btn_copyurl" style="width:100%;position:relative:display:block"> 
+										<div class="divEmbedLabel"><label style="font-weight:bold">EMBED</label></div>
+										<div class="divCopyEmbedCodeLabel"><label id="btn_copyEmbed" class="clickToCopyText" onclick="copytoclipboard(&#39;btn_copyEmbed&#39;,&#39;embedCode&#39;,&#39;wrapper_btn_copyurl&#39;,clip1);">click to copy</label></div>
+										<div class="divURLLabel"><label style="font-weight:bold">URL</label></div>
+										<div class="divCopyUrlLabel"><label id="btn_copyurl" class="clickToCopyText" onclick="copytoclipboard(&#39;btn_copyurl&#39;,&#39;shareChartUrl&#39;,&#39;wrapper_btn_copyurl&#39;,clip2);">click to copy</label></div>								
+									</div>	
+									<br>								
+									<table cellspacing="0" cellpadding="0" class="tableStyle"> 
+										<tbody><tr width="100%">                 
+										   <td><input type="textInput" class="chartShareInputCopyEmbed" id="embedCode" name="embedCode" onclick="copytoclipboard(&#39;embedCode&#39;,&#39;embedCode&#39;,&#39;wrapper_btn_copyurl&#39;,clip3);" value="&lt;div style=&quot;position:relative&quot;&gt;&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;http://accounts.icharts.net/widget/assets/ichartwidget.css&quot;&gt;&lt;/link &gt;&lt;iframe src=&quot;http://accounts.icharts.net/icharts/embed/M3rXwypB&quot; height=&quot;564&quot; width=&quot;585&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;&lt;div class=&quot;chartdetails&quot; id=&quot;chartdetails105804&quot;&gt;&lt;span&gt;Chart:  Top Five Worldwide Smartphone Vendors, 4Q 2011,           Five Quarter Market Share Changes (Units)&lt;/span&gt;&lt;span&gt;Description: IDC released the top five smartphone vendors in the world.&lt;/span&gt;&lt;span&gt;Tags: smartphone, mobile phone, Samsung, Apple, Nokia, HTC, Research In Motion&lt;/span&gt;&lt;span&gt;Author: &lt;a href=&quot;http://www.idc.com&quot;&gt;IDC&lt;/a&gt;&lt;/span&gt;&lt;span&gt;&lt;a href=&quot;http://www.icharts.net&quot;&gt;charts powered by iCharts&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;">  </td>                           
+										   <td class="tdEmbedCodeSpacer"></td>
+ 										   <td><input type="textInput" class="chartShareInputCopyEmbed" id="shareChartUrl" name="shareChartUrl" onclick="copytoclipboard(&#39;shareChartUrl&#39;,&#39;shareChartUrl&#39;,&#39;wrapper_btn_copyurl&#39;,clip4);" value="http://www.idc.com/getdoc.jsp?containerId=prUS23299912"> </td>
+										 </tr>
+										 <tr width="100%"><td colspan="3" style="visibility:hidden"><span class="chartwidgetlink advocChartLabel">This chart can be viewed on mobile devices.</span></td>
+										 </tr>
+									</tbody></table>  
+									<hr noshade="" size="1">	
+									<table style="margin-top:0px" class="tableStyle"> 
+										<tbody><tr width="100%">                  
+											<td><label> EMAIL</label></td>
+										</tr>    
+									</tbody></table>   									
+									 <table cellspacing="2" cellpadding="0" class="tableStyle"> 
+									   <tbody><tr width="100%"> 
+										  <td><div style="width:75"><label>YOUR NAME </label></div></td>               
+										  <td> <input type="textInput" id="emailSenderName" class="chartShareInput" size="50" maxlength="50" name="emailSenderName"></td>                 
+									   </tr>
+									<tr width="100%"> 
+										  <td><lable>EMAIL TO</lable> </td>               
+										  <td> <input type="textInput" id="emailToSend" class="chartShareInput" size="50" maxlength="50" name="emailToSend"></td>                 
+									   </tr>
+									<tr width="100%"> 
+										  <td>MESSAGE<br><span style="color:#3D3D3D">(optional)</span></td>               
+										  <td><textarea name="emailBody" id="emailBody" class="chartShareEmailBody" size="1000" maxlength="1000"></textarea></td>                 
+									   </tr>
+									<tr width="100%"> 
+										  <td></td>               
+										  <td align="right" width="100%"> <input type="submit" id="submit_btn" class="sendButton button" name="send" value="SEND">
+									 </td>                 
+									   </tr>
+									</tbody></table>  
+								    <input type="hidden" id="formSubmitUrl" value="http://accounts.icharts.net/icharts//ShareChart.jsp">
+								    <input type="hidden" id="encryptedChartId" value="M3rXwypB">	
+									</form>		
+							</div> 
+						</div>
+						<div class="chartdetails" style="z-index:2" id="chartdetails">	
+							<div style="display:none">
+								<ilayer width="100%" onselectstart="return false">
+									<layer width="100%" onmouseover="isHot=true;if (isN4) ddN4(chartdetails)" onmouseout="isHot=false">
+									   <img src="" class="windowTopic">
+									</layer>
+								</ilayer>
+							</div>
+							<div style="font-family:Arial,Helvetica Neueu,Helvetica;font-size:11px;font-weight:bold">
+							   <div class="infoChartPopupTitleBar" id="infoChartPopupTitleBar">							
+									<a id="popupChartClose" onclick="javascript:showHideChartInfo(&#39;chartdetails&#39;)" style="cursor: pointer;margin-left:15px;">x</a>
+									<h1 id="chartDetailsTitleBarH1" style="width:100%;margin-top:5px;margin-left:5px;margin-right:15px;">&nbsp;INFORMATION ABOUT THIS CHART</h1> 
+								</div>	    						  
+								<div class="chartDetailsDiv">								
+									<span style="height:20px;width:90px;float:left;">DESCRIPTION </span><div id="chartDescription" class="chartDescriptionDiv"><textarea id="chartDescriptionTextArea" class="chartDescription chartinfodetails" readonly="true">IDC released the top five smartphone vendors in the world.</textarea></div>
+									<hr noshade="" size="1"><span class="chartAuthorSpan">AUTHOR</span><div id="chartAuthor" class="chartAuthorDiv"><a class="chartwidgetlink" id="chartwidgetlinkInfo" href="http://www.idc.com/" target="_blank">IDC</a><a></a></div><a>
+									<hr noshade="" size="1"><span class="chartAuthorSpan">COPYRIGHT</span><div id="chartCopyright" class="chartCopyRightTextArea">Copyright IDC 2012</div>
+									<hr noshade="" size="1"><span class="chartTagsLabel">TAGS </span><div id="chartTags"><textarea id="chartTagsTextArea" class=" chartTagsTextArea" readonly="true">smartphone, mobile phone, Samsung, Apple, Nokia, HTC, Research In Motion</textarea></div>
+									<span class="chartwidgetlink"></span></a><a href="http://www.icharts.net/faq" target="_blank" class="chartwidgetlink" style="display:none">Learn how </a><span style="color:#808080;font-style:italic;display:none">to share online or mobile</span>								  
+								</div>
+								</div>
+						</div>
+						<style type="text/css">
+							
+							
+						</style>
+						
+						
+						
+ 						 
+								<img id="fastloadingimage" src="published_ichart_105804.png" alt="" style="border: 1px solid rgb(153, 153, 153); position: absolute; left: 0px; top: 24px; height: 514px; width: 583px; z-index: 2; visibility: hidden;">
+						  
+						
+						
+
+						<img id="activityIndicator" src="chart_loading.gif" alt="" style="position: absolute; left: 240.5px; top: 231px; z-index: 3; visibility: hidden;">
+
+ 						<object type="application/x-shockwave-flash" name="icharts" data="http://accounts.icharts.net/widget/icharts2.0.swf?5.5" width="585" height="514" id="nonFlashBrowserContent" style="visibility: visible;"><param name="wmode" value="transparent"><param name="allowscriptaccess" value="always"><param name="isPrivate" value="0"><param name="classid" value="D27CDB6E-AE6D-11cf-96B8-444553540000"><param name="flashvars" value="id=M3rXwypB&amp;embedPageUrl=http%3A%2F%2Fwww.idc.com%2Fgetdoc.jsp%3FcontainerId%3DprUS23299912&amp;showApiLoadingImage=0"></object>
+						<div id="chartFooter" style="background:#F0EFEF;display:block;border: 1px solid #999999;padding-left:5px;padding-right:5;height:23px" width="100%">
+						<span style="float:left;width:52px;padding-top:3px"><a onclick="javascript:showHideChartInfo(&#39;chartdetails&#39;)" rel="nofollow"><span id="infoSpan" class="aShare aInfoImage" onmouseover="onHeaderSpanMoseOver(&#39;infoSpan&#39;)" onmouseout="onHeaderSpanMoseOut(&#39;infoSpan&#39;)">&nbsp;</span></a></span> 
+															
+								<span class="chartInfoBox" style="float:left;"><div id="chartFooterChartByLabel" class="chartFooterChartBy" style="margin-top:4px;float:left;">|&nbsp;Chart by&nbsp;</div><a href="http://www.idc.com/" target="_blank" class="chartfooterAuthorlink" id="chartfooterAuthorlink">IDC</a></span> 							 
+							
+							<span id="chartLogoContent" style="float:right;padding-top:6px">
+							  <a href="http://www.icharts.net/" target="_blank" onclick="javascript:void(0)" rel="nofollow"><span id="infoChartLogo" class="aShare aChartLogoImage" onmouseover="onHeaderSpanMoseOver(&#39;infoChartLogo&#39;)" onmouseout="onHeaderSpanMoseOut(&#39;infoChartLogo&#39;)"></span></a>							 
+							</span>
+						</div>
+	 
+ </body><span id="skype_highlighting_settings" display="none" autoextractnumbers="1"></span><object id="skype_plugin_object" location.href="http://accounts.icharts.net/icharts/embed/M3rXwypB" location.hostname="accounts.icharts.net" style="position: absolute; visibility: hidden; left: -100px; top: -100px;" width="0" height="0" type="application/x-vnd.skype.click2call.chrome.5.7.0"></object></html>
