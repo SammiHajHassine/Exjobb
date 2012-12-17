@@ -6,13 +6,15 @@ var MenuHandler = function() {
 MenuHandler.prototype.distribute = observerPattern.distribute;
 var imagehandler = new imageHandler();
 var menuhandler = new MenuHandler();
-var instance = new SideMenus();
+var sidemenus = new SideMenus();
+var helper = new Helper();
 
-instance.observe(menuhandler, "openActiveMenus", instance.openSideMenus);
-instance.observe(menuhandler, "itemClicked", instance.itemClicked);
-instance.observe(menuhandler, "returnToStart", instance.returnToStart);
-instance.observe(menuhandler, "arrowClicked", instance.arrowClicked);
+sidemenus.observe(menuhandler, "openActiveMenus", sidemenus.openActiveMenus);
+sidemenus.observe(menuhandler, "itemClicked", sidemenus.itemClicked);
+sidemenus.observe(menuhandler, "returnToStart", sidemenus.returnToStart);
+sidemenus.observe(menuhandler, "arrowClicked", sidemenus.arrowClicked);
 
+helper.setup();
 
 $('#navImg').click(function() {
 	menuhandler.distribute('openActiveMenus');
@@ -31,6 +33,9 @@ $('.arrowimg').click(function() {
 	menuhandler.item = this;
 	menuhandler.distribute('arrowClicked');
 });
+
+
+
 
 
 
